@@ -16,15 +16,14 @@ public class Main {
             String command = scanner.nextLine();
 
             switch (command) {
-                case "1":
-                    addNewDish();
-                    break;
-                case "2":
-                    generateDishCombo();
-                    break;
-                case "3":
+                case "1" -> addNewDish();
+                case "2" -> generateDishCombo();
+                case "3" -> {
                     return;
+                }
+                default -> System.out.println("Такой команды нет! Введите команду от 1 до 3, а у Вас " + command);
             }
+            System.out.println("==========================================================");
         }
     }
 
