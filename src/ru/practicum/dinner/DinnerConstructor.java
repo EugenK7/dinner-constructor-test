@@ -14,14 +14,14 @@ public class DinnerConstructor {
     }
 
     void saveTypeAndDish(String dishType, String dishName) { // сохраняем блюда по типам в таблицу
+        ArrayList<String> dishes;
         if (dishesByTypes.containsKey(dishType)) { // проверяем наличие уже такого типа в таблице
-            ArrayList<String> dishes = dishesByTypes.get(dishType);
-            dishes.add(dishName);
+            dishes = dishesByTypes.get(dishType);
         } else {
-            ArrayList<String> dishes = new ArrayList<>();
-            dishes.add(dishName);
+            dishes = new ArrayList<>();
             dishesByTypes.put(dishType, dishes);
         }
+        dishes.add(dishName);
     }
 
     boolean checkType(String type) { // проверяем наличие типа блюда в таблице
