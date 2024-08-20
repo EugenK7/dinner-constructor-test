@@ -37,7 +37,7 @@ public class DinnerConstructor {
             ArrayList<String> combo = new ArrayList<>(); // создаем новый набор
             for (String type : types) { // обходим все запрошенные типы блюд
                 ArrayList<String> dishes = dishesByTypes.get(type); // получаем список блюд из таблицы по типу
-                int randomNumberOfDish = random.nextInt(dishes.size() - 1);
+                int randomNumberOfDish = random.nextInt(dishes.size());
                 String randomDish = dishes.get(randomNumberOfDish); // получаем случайное блюдо из списка имеющихся
                 combo.add(randomDish); // добавляем случаное блюдо в набор
             }
